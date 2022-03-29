@@ -1,4 +1,5 @@
-import BreezySwing.*;
+import BreezySwing.GBFrame;
+import BreezySwing.GBPanel;
 
 import javax.swing.*;
 
@@ -6,12 +7,18 @@ public class Main extends GBFrame {
 
     // Initialize GUI Elements
     GBPanel inputPanel = addPanel(1, 1, 1, 1);
-    JLabel topLeftSpacer = inputPanel.addLabel(" ", 1, 1, 1, 1);
     JTextField inputField = inputPanel.addTextField("", 2, 2, 1, 1);
-    JLabel bottomRightSpacer = inputPanel.addLabel(" ", 3, 3, 1, 1);
 
     GBPanel buttonFields = addPanel(2, 1, 1, 1);
     JButton outputButton = buttonFields.addButton("Output", 1, 2, 1, 1);
+
+    /**
+     * Initialize the spacers on the GUI
+     */
+    public Main() {
+        inputPanel.addLabel(" ", 1, 1, 1, 1);
+        inputPanel.addLabel(" ", 3, 3, 1, 1);
+    }
 
     /**
      * Main Method of the program
